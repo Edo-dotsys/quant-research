@@ -1,0 +1,42 @@
+{
+  "name": "Quant Research",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "settings": {
+    "markdown.preview.security.level": "allow-insecure-local-content",
+    "extensions.ignoreRecommendations": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.postCommitCommand": "sync",
+    "git.autofetch": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "git.useEditorAsCommitInput": false,
+    "git.rebaseWhenSync": true,
+    "terminal.integrated.ignoreProcessKeybindingWarnings": true,
+    "files.exclude": {
+      ".gitignore": true,
+      "**/.github": true,
+      "**/.devcontainer": true,
+      "**/tests": true
+    }
+  },
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:latest": {
+      "installTinyTex": "true"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.13",
+      "installPackages": "numpy,pandas,matplotlib,scipy,jupyter"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "quarto.quarto",
+        "mathematic.vscode-pdf",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  }
+}
